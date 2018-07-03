@@ -84,14 +84,4 @@ defmodule Guardian.Token do
               to_type :: String.t(),
               options :: Guardian.options()
             ) :: {:ok, {token, claims}, {token, claims}} | {:error, any}
-
-  @doc """
-  Generates a random ID.
-  """
-  @spec id() :: String.t()
-  def id do
-    16
-    |> :crypto.strong_rand_bytes()
-    |> Base.encode16(case: :lower)
-  end
 end

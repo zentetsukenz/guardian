@@ -219,7 +219,7 @@ defmodule Guardian.Token.Jwt do
   @doc """
   Generate unique token id
   """
-  def token_id, do: Guardian.Token.id()
+  def token_id, do: Guardian.UUID.generate()
 
   @doc """
   Create a token. Uses the claims, encodes and signs the token.

@@ -44,7 +44,7 @@ defmodule Guardian.Mixfile do
   defp elixirc_paths(_), do: ["lib"]
 
   def application do
-    [applications: [:crypto, :logger, :poison, :jose]]
+    [extra_applications: [:crypto, :logger]]
   end
 
   def docs do
