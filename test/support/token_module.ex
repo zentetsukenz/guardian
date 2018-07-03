@@ -31,7 +31,7 @@ defmodule Guardian.Support.TokenModule do
 
   def token_id do
     send_function_call({__MODULE__, :token_id, []})
-    UUID.uuid4()
+    Guardian.Token.id()
   end
 
   def peek(_mod, token) do

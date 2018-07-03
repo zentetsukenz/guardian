@@ -41,7 +41,7 @@ defmodule Guardian.Token.JwtTest do
 
   setup do
     claims = %{
-      "jti" => UUID.uuid4(),
+      "jti" => Guardian.Token.id(),
       "aud" => "MyApp",
       "typ" => "access",
       "exp" => Guardian.timestamp() + 10_000,
